@@ -1,0 +1,42 @@
+.root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .pagination {
+    display: flex;
+    margin: 0 auto;
+    gap: 0 10px;
+    li {
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border: 1px solid black;
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        cursor: pointer;
+        font-size: 20px;
+        font-weight: 800;
+        background-color: #ededed;
+        @media (max-width: 400px) {
+          width: 40px;
+          height: 40px;
+          cursor: pointer;
+          font-size: 20px;
+          font-weight: 800;
+        }
+        &:hover {
+          background-color: #cfcdcd;
+        }
+      }
+    }
+    :global {
+      .selected {
+        a {
+          background-color: #b9b7b7;
+        }
+      }
+    }
+  }
+}
